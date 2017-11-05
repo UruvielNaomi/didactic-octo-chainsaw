@@ -1,18 +1,20 @@
 <html>
     <head>
-        <title>Naomi's blog</title>
+        <title>Omnomnomi</title>
     </head>
     <body>
-    	<div>
-            <h1><a href="/">Naomi's Blog</a></h1>
+
+        <<div>
+            <h1><a href="/">Omnomnomi</a></h1>
         </div>
-    	
-    	{% for post in posts %}
-    		<div>
-    			<p>created: {{ post.created.date }}</p>
-    			<h1><a href="">{{ post.title }}</a></h1>
-    			<p>{{post.text|linebreaksbr }}</p>
-    		</div>
-		{% endfor %}
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    
     </body>
 </html>
